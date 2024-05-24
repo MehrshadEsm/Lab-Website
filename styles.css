@@ -1,0 +1,420 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: Futura, Helvetica Neue, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin-left: 2%;
+    color: purple;
+}
+
+h2 {
+    text-align: center;
+}
+button {
+    width: 200px;
+    padding: 15px 0; 
+    text-align: center; 
+    margin: 20px 10px; 
+    border-radius: 30px; 
+    font-weight: bold;
+    border: 2px solid purple; 
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    top: -40px;
+}
+
+span {
+    background: purple;
+    height: 100%;
+    width: 0%; 
+    border-radius: 23px; 
+    position: absolute;
+    left: 0; 
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    color: white;
+    transition: 0.25s;
+}
+
+header {
+    background-color: rgba(100, 50, 200, 0.35);
+    color: black;
+    background-size: 100%;
+    background-position: center;
+    height: 75px;
+    padding: 20px;
+    text-align: center;
+}
+
+ul {
+    margin: 0; padding: 0;
+    margin-top: -30px;
+    list-style-type: none;
+}
+li {
+    display: inline-block; 
+    margin-right: 20px;
+    position: relative;
+}
+
+li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: purple;
+    position: absolute;
+    left: 0;
+    bottom: -65px;
+    transition: 0.5s;
+}
+
+li:hover:after {
+    width: 100%;
+}
+
+a:not(.youtube a, .features a, .Bio-Images a, .publication a) {
+    position: relative;
+    top: 58px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+/* FEATURES */
+
+.features {
+    background: white;
+    color: gray;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .features figure {
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    width: 75%;
+    position: relative; 
+    overflow: hidden;
+    padding-top: 17px;
+  }
+  
+  .features figure img {
+    border: 1px solid white;
+    border-radius: 5%;
+    box-shadow: gray 0 0 10px;
+    width: 85%; 
+    transition: transform 0.5s ease; 
+  }
+
+  .features figure:hover img {
+    transform: scale(1.03); 
+    border-width: 5px; 
+    transition: transform 0.5s ease, border-width 0.5s ease; 
+}
+
+
+.Bio-Images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 5px; 
+  }
+  
+  .Bio-Images figure {
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative; 
+    overflow: visible; 
+    padding-top: 17px;
+    
+  }
+  
+  .Bio-Images figure img {
+    width: 100%; 
+    height: 100%; 
+    max-width: 500px;
+    max-height: 350px;
+    border: 1px solid purple;
+    border-radius: 5%;
+    object-fit: cover;
+    transition: filter 0.4s ease; 
+  }
+
+  .Bio-Images figure figcaption {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+    font-size: larger; 
+  }
+
+  .Bio-Images figure figcaption.position_title {
+    top: calc(50% + 50px); 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: smaller;
+}
+
+  
+  .Bio-Images figure:hover figcaption {
+    opacity: 1; 
+  }
+  
+  .Bio-Images figure:hover img {
+    filter: brightness(75%) grayscale(100%); 
+    transform: scale(1.015);
+    border-width: 3px;
+    transition: transform 0.5s ease, border-width 0.5s ease; 
+  }
+  /* FOOTER */
+  
+  footer {
+    background: black;
+    color: gray;
+    font-size: 12px;
+    padding: 20px 20px;
+    text-align: center;
+  }
+
+  .bios {
+    margin: 0% 10% 10% 10%;
+    text-align: center;
+  }
+
+  .research {
+    padding: 2% 10% 0% 10%;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .contact-info, .contact-form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-info h2, .contact-form h2 {
+    color: purple;
+}
+
+.contact-info h3 {
+    margin-top: 20px;
+}
+
+.contact-info p, .contact-form label, .contact-form input, .contact-form textarea, .contact-form button {
+    margin-top: 10px;
+}
+
+.contact-info p a {
+    top: 0px;
+}
+
+.contact-form label {
+    display: block;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    top: 20px;
+}
+
+.contact-form button:hover {
+    background-color: purple;
+}
+
+.address-with-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.address-with-image img {
+    width: 480px; 
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px; 
+    padding-left: 250px;
+}
+
+.address-with-image p {
+    margin-top: -150px;
+}
+
+.publications {
+    padding: 20px;
+}
+
+.publications h2 {
+    color: purple;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.publications h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.publications .publication {
+    margin-bottom: 20px;
+}
+
+.publications h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.publications p {
+    margin-bottom: 5px;
+}
+
+.publications input[type="text"] {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.publications button {
+    padding: 10px 20px;
+    background-color: purple;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    top: 0px;
+}
+
+.publications button:hover {
+    background-color: purple;
+}
+
+.publications h3 {
+    color: purple;
+}
+
+
+.resources {
+    margin-left: 10px;
+}
+
+.resource_p {
+    margin-left: 10px;
+}
+
+.resource button {
+    margin-left: 43%;
+}
+
+
+.Other_Research {
+    background: white;
+    color: gray;
+    padding: 0px 25px 25px 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.Other_Research figure {
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    padding-top: 0px;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 70px;
+    position: -40px;
+}
+
+.Other_Research figure img {
+    border: 1px solid white;
+    border-radius: 5%;
+    box-shadow: gray 0 0 10px;
+    width: 480px;
+    height: 270px;
+    object-fit: cover;
+    transition: transform 0.5s ease, border-width 0.5s ease; 
+    
+
+}
+
+.Other_Research figure:hover img {
+    transform: scale(1.03);
+    border-width: 5px; 
+}
+
+.Other_Research figure figcaption{
+    padding-top: 70px;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  .images img {
+    max-width: 720px; 
+    max-height: 1080px;
+    height: auto; 
+    border: 1px solid purple;
+    border-radius: 2%;
+    box-shadow: gray 0 0 10px;
+  }
+
+  .YouTube {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .Header_img {
+    position: relative; /* Ensures proper positioning of child elements */
+    height: 300px; /* Adjust the height according to your design */
+    overflow: hidden; /* Hides any overflow of the image */
+}
+
+.Header_img img {
+    width: 100%; /* Ensures the image fills its container horizontally */
+    height: auto; /* Maintains the image's aspect ratio */
+    position: absolute; /* Allows the image to be positioned relative to its parent */
+    top: 0; /* Aligns the image to the top of its container */
+    left: 0; /* Aligns the image to the left of its container */
+    z-index: -1; /* Places the image behind the content */
+    background-attachment: fixed; /* Fixes the background position while scrolling */
+}
